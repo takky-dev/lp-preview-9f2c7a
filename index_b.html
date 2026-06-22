@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>株式会社山脇建設工業｜大阪・寝屋川 とび・土工・内装仕上工事</title>
+<style>
+  :root {
+    --orange: #e8531a;
+    --orange2: #f5a623;
+    --dark: #1a1a1a;
+    --mid: #4b5563;
+    --light: #fdf7f2;
+    --white: #ffffff;
+    --border: #e8ddd5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; color: var(--dark); line-height: 1.85; background: var(--white); }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== HEADER ===== */
+  header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.97); border-bottom: 2px solid var(--orange2); backdrop-filter: blur(8px); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { color: var(--dark); font-weight: 900; font-size: 18px; letter-spacing: 0.02em; }
+  .logo span { color: var(--orange); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { color: var(--mid); text-decoration: none; font-size: 14px; font-weight: 600; transition: color .2s; }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-tel { background: var(--orange); color: #fff; font-weight: 900; padding: 8px 18px; border-radius: 4px; text-decoration: none; font-size: 14px; }
+  @media (max-width: 760px) { .nav-links { display: none; } }
+
+  /* ===== HERO ===== */
+  .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 64px; overflow: hidden; background: var(--light); }
+  .hero-bg {
+    position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+    overflow: hidden; z-index: 0;
+  }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+  .hero-stripe { position: absolute; bottom: 0; left: 0; right: 0; height: 6px; background: repeating-linear-gradient(90deg, var(--orange) 0 40px, var(--orange2) 40px 80px); z-index: 2; }
+  .hero-content { max-width: 580px; position: relative; z-index: 1; }
+  .hero-badge { display: inline-block; background: var(--orange); color: #fff; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 2px; margin-bottom: 28px; letter-spacing: 0.05em; }
+  .hero h1 { font-size: 52px; font-weight: 900; line-height: 1.25; margin-bottom: 24px; letter-spacing: 0.02em; color: var(--dark); }
+  .hero h1 .small { display: block; font-size: 19px; color: var(--orange); margin-bottom: 10px; font-weight: 700; }
+  .hero p { font-size: 17px; color: var(--mid); margin-bottom: 36px; }
+  .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn { display: inline-block; text-decoration: none; font-weight: 900; padding: 16px 36px; border-radius: 4px; font-size: 16px; transition: transform .15s, box-shadow .15s; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+  .btn-primary { background: var(--orange); color: #fff; }
+  .btn-ghost { background: transparent; color: var(--dark); border: 2px solid var(--dark); }
+  @media (max-width: 760px) { .hero h1 { font-size: 34px; } .hero h1 .small { font-size: 16px; } .hero-bg { display: none; } }
+
+  /* ===== SECTION COMMON ===== */
+  section { padding: 96px 0; }
+  .section-label { color: var(--orange); font-weight: 900; font-size: 13px; letter-spacing: 0.15em; margin-bottom: 8px; }
+  .section-title { font-size: 34px; font-weight: 900; margin-bottom: 16px; line-height: 1.3; }
+  .section-lead { color: var(--mid); font-size: 16px; margin-bottom: 48px; max-width: 640px; }
+
+  /* ===== MESSAGE ===== */
+  .message { background: var(--white); border-top: 1px solid var(--border); }
+  .message-flex { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: center; }
+  .message-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+  .message-text blockquote { font-size: 22px; font-weight: 900; line-height: 1.6; color: var(--dark); border-left: 4px solid var(--orange); padding-left: 20px; margin: 24px 0 28px; }
+  .message-text p { color: var(--mid); font-size: 15px; margin-bottom: 14px; }
+  .message-sign { font-weight: 900; font-size: 15px; margin-top: 24px; }
+  .message-sign span { color: var(--mid); font-weight: 400; font-size: 13px; display: block; margin-bottom: 4px; }
+  @media (max-width: 760px) { .message-flex { grid-template-columns: 1fr; gap: 32px; } .message-img { max-width: 240px; } }
+
+  /* ===== STRENGTHS ===== */
+  .strengths { background: var(--light); }
+  .strength-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .strength-card { background: #fff; border-radius: 10px; padding: 36px 28px; box-shadow: 0 2px 16px rgba(0,0,0,.06); border-bottom: 4px solid var(--orange); }
+  .strength-num { font-size: 12px; font-weight: 900; color: var(--orange); letter-spacing: 0.1em; margin-bottom: 12px; }
+  .strength-icon { font-size: 32px; margin-bottom: 14px; }
+  .strength-card h3 { font-size: 20px; font-weight: 900; margin-bottom: 10px; }
+  .strength-card p { color: var(--mid); font-size: 15px; }
+  @media (max-width: 760px) { .strength-grid { grid-template-columns: 1fr; } }
+
+  /* ===== SERVICES ===== */
+  .services { background: var(--white); }
+  .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .service-card { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  .service-img { width: 100%; height: 220px; object-fit: cover; display: block; }
+  .service-body { padding: 28px; }
+  .service-body .tag { color: var(--orange); font-weight: 900; font-size: 13px; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .service-body h3 { font-size: 22px; font-weight: 900; margin-bottom: 10px; }
+  .service-body ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .service-body li { background: var(--light); color: var(--mid); padding: 4px 14px; border-radius: 20px; font-size: 13px; border: 1px solid var(--border); }
+  @media (max-width: 760px) { .service-grid { grid-template-columns: 1fr; } }
+
+  /* ===== WORKS ===== */
+  .works { background: var(--light); }
+  .works-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .work-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); transition: transform .3s; }
+  .work-img:hover { transform: scale(1.03); }
+  @media (max-width: 760px) { .works-grid { grid-template-columns: 1fr 1fr; } }
+
+  /* ===== RECRUIT ===== */
+  .recruit { background: var(--white); border-top: 1px solid var(--border); }
+  .recruit-inner { background: linear-gradient(135deg, var(--orange), #c84010); border-radius: 16px; padding: 64px 56px; color: #fff; }
+  .recruit .section-label { color: #ffd8b0; }
+  .recruit .section-title { color: #fff; font-size: 38px; margin-bottom: 12px; }
+  .recruit-flex { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: start; margin-top: 36px; }
+  .recruit-lead { font-size: 16px; color: #ffe8d6; margin-bottom: 24px; }
+  .recruit-points { list-style: none; }
+  .recruit-points li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.2); font-weight: 700; padding-left: 28px; position: relative; font-size: 15px; }
+  .recruit-points li::before { content: "✓"; position: absolute; left: 0; color: var(--orange2); font-weight: 900; }
+  .recruit-box { background: rgba(255,255,255,.15); border-radius: 12px; padding: 36px; text-align: center; backdrop-filter: blur(4px); }
+  .recruit-box .big { font-size: 19px; font-weight: 900; margin-bottom: 10px; }
+  .recruit-box p { color: #ffe8d6; font-size: 14px; margin-bottom: 24px; }
+  @media (max-width: 760px) { .recruit-inner { padding: 40px 24px; } .recruit-flex { grid-template-columns: 1fr; } .recruit .section-title { font-size: 28px; } }
+
+  /* ===== SPONSOR ===== */
+  .sponsor { background: #1a1a1a; color: #fff; }
+  .sponsor-flex { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: center; }
+  .sponsor-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px; border: 1px solid rgba(224,48,48,.25); }
+  .sponsor .section-label { color: #e03030; }
+  .sponsor .section-title { color: #fff; }
+  .sponsor p { color: #aaa; margin-bottom: 16px; }
+  .sponsor-quote { border-left: 3px solid #e03030; padding-left: 20px; font-size: 18px; font-weight: 700; color: #fff; margin: 24px 0; }
+  @media (max-width: 760px) { .sponsor-flex { grid-template-columns: 1fr; } .sponsor-img { max-width: 260px; margin: 0 auto; } }
+
+  /* ===== COMPANY ===== */
+  .company { background: var(--light); }
+  .company-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+  .company-table th, .company-table td { text-align: left; padding: 16px 20px; border-bottom: 1px solid var(--border); font-size: 15px; }
+  .company-table th { width: 200px; color: var(--dark); font-weight: 900; background: var(--light); }
+  .company-table td { color: var(--mid); }
+
+  /* ===== CONTACT ===== */
+  .contact { background: var(--dark); color: #fff; text-align: center; }
+  .contact .section-title { color: #fff; }
+  .contact-tel { font-size: 44px; font-weight: 900; color: var(--orange2); margin: 16px 0 4px; letter-spacing: 0.02em; }
+  .contact-tel a { color: inherit; text-decoration: none; }
+  .contact-hours { color: #888; font-size: 14px; margin-bottom: 32px; }
+
+  /* ===== FOOTER ===== */
+  footer { background: #111; color: #666; padding: 32px 0; text-align: center; font-size: 13px; }
+  footer .logo { font-size: 16px; margin-bottom: 8px; color: #aaa; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container nav">
+    <div class="logo">山脇建設工業<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#message">社長メッセージ</a></li>
+      <li><a href="#services">事業内容</a></li>
+      <li><a href="#works">施工事例</a></li>
+      <li><a href="#recruit">採用情報</a></li>
+      <li><a href="#company">会社概要</a></li>
+    </ul>
+    <a href="tel:0728132938" class="nav-tel">072-813-2938</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&h=1200&fit=crop&auto=format&q=80" alt="建設現場">
+  </div>
+  <div class="container hero-content">
+    <span class="hero-badge">大阪・寝屋川 ｜ とび・土工・内装仕上工事</span>
+    <h1>
+      <span class="small">人と、現場と、向き合う。</span>
+      仕事は、<br>人がつくる。
+    </h1>
+    <p>技術は大事。でも一番大事なのは、一緒に働く人。<br>山脇建設工業は、仲間を大切にしながら、現場を一つひとつ丁寧に仕上げます。</p>
+    <div class="hero-cta">
+      <a href="#recruit" class="btn btn-primary">採用情報を見る</a>
+      <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
+    </div>
+  </div>
+  <div class="hero-stripe"></div>
+</section>
+
+<!-- MESSAGE -->
+<section class="message" id="message">
+  <div class="container">
+    <div class="message-flex">
+      <img class="message-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&auto=format&q=80" alt="山脇社長（※実写真に差し替え）">
+      <div class="message-text">
+        <div class="section-label">MESSAGE</div>
+        <h2 class="section-title">「やってみたい」が<br>一番の才能だと思う。</h2>
+        <blockquote>「未経験でも、気持ちがある人と一緒に仕事がしたい。」</blockquote>
+        <p>山脇建設工業を立ち上げたのは2021年。若い会社だからこそ、一人ひとりの頑張りがそのまま会社の色になります。</p>
+        <p>建設の仕事は、体力だけじゃなく、段取りや人への気配りが大事です。でも最初からできる人なんていない。だから僕自身が現場でいっしょに動きながら教えます。</p>
+        <p>「手に職をつけたい」「何かを変えたい」そう思っているなら、ぜひ一度話を聞きにきてください。</p>
+        <div class="message-sign">
+          <span>代表取締役</span>
+          山脇 隆男
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section class="strengths" id="strengths">
+  <div class="container">
+    <div class="section-label">OUR STRENGTHS</div>
+    <h2 class="section-title">山脇建設工業が選ばれる理由</h2>
+    <p class="section-lead">寝屋川を拠点に、とび・土工から内装仕上まで一貫して対応。小回りの利く体制で、現場の「困った」に素早く応えます。</p>
+    <div class="strength-grid">
+      <div class="strength-card">
+        <div class="strength-num">STRENGTH 01</div>
+        <div class="strength-icon">🏗️</div>
+        <h3>骨格から仕上げまで一貫対応</h3>
+        <p>とび・土工工事と内装仕上工事の両方に対応。下地から仕上げまで任せられるので、工程がスムーズです。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">STRENGTH 02</div>
+        <div class="strength-icon">📋</div>
+        <h3>大阪府知事許可の確かな技術</h3>
+        <p>建設業許可（大阪府知事許可 第157118号）を取得。法令に基づいた、信頼できる施工体制です。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">STRENGTH 03</div>
+        <div class="strength-icon">📍</div>
+        <h3>地域密着・小回りの良さ</h3>
+        <p>寝屋川を中心に大阪エリアへ素早く対応。一人ひとりのお客様と丁寧に向き合います。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">SERVICES</div>
+    <h2 class="section-title">事業内容</h2>
+    <p class="section-lead">建物の「骨格」をつくるとび・土工工事と、空間を仕上げる内装仕上工事。2つの領域で現場を支えます。</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=440&fit=crop&auto=format&q=80" alt="とび・土工工事">
+        <div class="service-body">
+          <div class="tag">TOBI · DOKO</div>
+          <h3>とび・土工工事</h3>
+          <ul>
+            <li>鳶工事</li><li>土工事</li><li>足場組立</li><li>解体補助</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&h=440&fit=crop&auto=format&q=80" alt="内装仕上工事">
+        <div class="service-body">
+          <div class="tag">INTERIOR</div>
+          <h3>内装仕上工事</h3>
+          <ul>
+            <li>軽天工事</li><li>ボード張り</li><li>間仕切り</li><li>防音工事</li><li>天井仕上</li><li>畳・ふすま</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section class="works" id="works">
+  <div class="container">
+    <div class="section-label">WORKS</div>
+    <h2 class="section-title">施工事例</h2>
+    <p class="section-lead">これまで手がけてきた現場の一部をご紹介します。（※山脇建設の実際の写真に差し替え）</p>
+    <div class="works-grid">
+      <img class="work-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例1">
+      <img class="work-img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例2">
+      <img class="work-img" src="https://images.unsplash.com/photo-1590079448074-57c4ad2ed0e6?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例3">
+      <img class="work-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例4">
+      <img class="work-img" src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例5">
+      <img class="work-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例6">
+    </div>
+  </div>
+</section>
+
+<!-- RECRUIT -->
+<section class="recruit" id="recruit">
+  <div class="container">
+    <div class="recruit-inner">
+      <div class="section-label">RECRUIT</div>
+      <h2 class="section-title">未経験でも大丈夫。<br>一緒に現場に出よう。</h2>
+      <div class="recruit-flex">
+        <div>
+          <p class="recruit-lead">「建設の仕事、やってみたいけど自分にできるかな」——それで十分です。社長自身が現場でいっしょに動きながら教えます。</p>
+          <ul class="recruit-points">
+            <li>未経験者歓迎・社長が直接教えます</li>
+            <li>頑張りをしっかり評価する給与体系</li>
+            <li>とび・土工・内装と幅広い技術が身につく</li>
+            <li>寝屋川エリア中心で通いやすい</li>
+          </ul>
+        </div>
+        <div class="recruit-box">
+          <div class="big">まずは話を聞くだけでもOK</div>
+          <p>「どんな雰囲気か見てみたい」<br>それだけでも全然かまいません。</p>
+          <a href="#contact" class="btn btn-primary" style="background:#fff; color:var(--orange);">応募・お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSOR -->
+<section class="sponsor">
+  <div class="container">
+    <div class="sponsor-flex">
+      <img class="sponsor-img" src="https://images.unsplash.com/photo-1549476464-37392f717541?w=600&h=800&fit=crop&auto=format&q=80" alt="政所仁選手（※山脇建設ロゴ入り写真に差し替え）">
+      <div>
+        <div class="section-label">PROUD SPONSOR</div>
+        <h2 class="section-title">世界で戦う格闘家を、<br>応援しています。</h2>
+        <p>山脇建設工業は、ONE Championshipで活躍するキックボクサー・政所仁選手のスポンサーとして、その挑戦を応援しています。</p>
+        <div class="sponsor-quote">「強く、まっすぐに。」<br>その姿勢は、私たちの仕事への想いと同じです。</div>
+        <p>世界の舞台で戦う選手を支える——その誇りを胸に、私たちも一つひとつの現場に全力で向き合っています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section class="company" id="company">
+  <div class="container">
+    <div class="section-label">COMPANY</div>
+    <h2 class="section-title">会社概要</h2>
+    <table class="company-table">
+      <tr><th>会社名</th><td>株式会社山脇建設工業</td></tr>
+      <tr><th>代表者</th><td>代表取締役　山脇 隆男</td></tr>
+      <tr><th>設立</th><td>2021年10月</td></tr>
+      <tr><th>資本金</th><td>500万円</td></tr>
+      <tr><th>所在地</th><td>〒572-0051　大阪府寝屋川市高柳5-11-5</td></tr>
+      <tr><th>電話番号</th><td>072-813-2938</td></tr>
+      <tr><th>事業内容</th><td>とび・土工工事／内装仕上工事</td></tr>
+      <tr><th>建設業許可</th><td>大阪府知事許可（般-3）第157118号</td></tr>
+      <tr><th>Instagram</th><td>@yamawaki.69</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-label" style="color:var(--orange2);">CONTACT</div>
+    <h2 class="section-title">お問い合わせ・ご相談</h2>
+    <p style="color:#888;">工事のご依頼、採用のご応募、お気軽にご連絡ください。</p>
+    <div class="contact-tel"><a href="tel:0728132938">072-813-2938</a></div>
+    <div class="contact-hours">受付時間：平日 8:00〜18:00</div>
+    <a href="https://www.instagram.com/yamawaki.69/" class="btn btn-primary">Instagramを見る</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="logo">山脇建設工業<span style="color:var(--orange);">.</span></div>
+    <div>〒572-0051 大阪府寝屋川市高柳5-11-5 ｜ 072-813-2938</div>
+    <div style="margin-top:12px;">© 2026 株式会社山脇建設工業</div>
+  </div>
+</footer>
+
+</body>
+</html>
