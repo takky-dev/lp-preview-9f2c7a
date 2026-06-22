@@ -154,6 +154,22 @@
   .float-cta .cta-line { background: #06c755; color: #fff; }
   @media (min-width: 760px) { .float-cta { display: none; } }
   @media (max-width: 759px) { body { padding-bottom: 56px; } }
+  /* ===== 施工体制 ===== */
+  .taisei { background: var(--navy2); }
+  .taisei-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+  .taisei-card { background: #1e2c45; border-radius: 10px; padding: 28px 20px; text-align: center; border-top: 3px solid var(--accent); }
+  .taisei-num { font-size: 32px; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+  .taisei-unit { font-size: 14px; color: #aab4c2; }
+  .taisei-label { font-size: 13px; font-weight: 700; color: #fff; margin-top: 10px; }
+  .taisei-note { font-size: 11px; color: #6b7a8d; margin-top: 4px; }
+  .taisei-badge { display: inline-block; background: var(--accent); color: var(--navy); font-size: 11px; font-weight: 900; padding: 3px 10px; border-radius: 20px; margin-top: 8px; }
+  @media (max-width: 760px) { .taisei-grid { grid-template-columns: 1fr 1fr; } }
+
+  /* ===== Worksキャプション ===== */
+  .work-card { position: relative; border-radius: 6px; overflow: hidden; }
+  .work-caption { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(10,19,32,0.82); color: #fff; font-size: 11px; padding: 6px 10px; line-height: 1.4; }
+  .work-caption strong { color: var(--accent); font-size: 12px; display: block; margin-bottom: 2px; }
+
 </style>
 </head>
 <body>
@@ -216,6 +232,40 @@
   </div>
 </section>
 
+
+<!-- 施工体制 -->
+<section class="taisei" id="taisei">
+  <div class="container">
+    <div class="section-label" style="color:var(--accent);">STRUCTURE</div>
+    <h2 class="section-title" style="color:#fff;">施工体制</h2>
+    <p class="section-lead" style="color:#aab4c2;">発注前に確認したい「数字」をまとめました。詳細はお問い合わせください。</p>
+    <div class="taisei-grid">
+      <div class="taisei-card">
+        <div class="taisei-num">○</div>
+        <div class="taisei-unit">名</div>
+        <div class="taisei-label">常用職人数</div>
+        <div class="taisei-note">※確認・差し替え</div>
+      </div>
+      <div class="taisei-card">
+        <div class="taisei-num" style="font-size:20px;padding-top:6px;">労災・雇用<br>保険</div>
+        <div class="taisei-label">保険加入</div>
+        <div class="taisei-badge">加入済み</div>
+      </div>
+      <div class="taisei-card">
+        <div class="taisei-num" style="font-size:18px;padding-top:6px;">グリーン<br>ファイル</div>
+        <div class="taisei-label">安全書類対応</div>
+        <div class="taisei-badge">対応可</div>
+      </div>
+      <div class="taisei-card">
+        <div class="taisei-num">○</div>
+        <div class="taisei-unit">名</div>
+        <div class="taisei-label">有資格者在籍</div>
+        <div class="taisei-note">足場作業主任者ほか<br>※確認・差し替え</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section id="services">
   <div class="container">
@@ -250,12 +300,12 @@
     <h2 class="section-title">施工事例</h2>
     <p class="section-lead" style="color:#aab4c2;">これまで手がけてきた現場の一部をご紹介します。（※山脇建設の実際の写真に差し替え）</p>
     <div class="works-grid">
-      <img class="work-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例1">
-      <img class="work-img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例2">
-      <img class="work-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例3">
-      <img class="work-img" src="https://images.unsplash.com/photo-1590079448074-57c4ad2ed0e6?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例4">
-      <img class="work-img" src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例5">
-      <img class="work-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop&auto=format&q=80" alt="施工事例6">
+      <div class="work-card"><img class="work-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&fit=crop&auto=format&q=80" alt="新築マンション"><div class="work-caption"><strong>新築マンション</strong>足場・とび工事 ／ 大東市</div></div>
+      <div class="work-card"><img class="work-img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=450&fit=crop&auto=format&q=80" alt="オフィス改装"><div class="work-caption"><strong>オフィス改装</strong>軽天・ボード工事 ／ 寝屋川市</div></div>
+      <div class="work-card"><img class="work-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&h=450&fit=crop&auto=format&q=80" alt="商業施設新築"><div class="work-caption"><strong>商業施設新築</strong>内装仕上一式 ／ 枚方市</div></div>
+      <div class="work-card"><img class="work-img" src="https://images.unsplash.com/photo-1590079448074-57c4ad2ed0e6?w=600&h=450&fit=crop&auto=format&q=80" alt="戸建住宅新築"><div class="work-caption"><strong>戸建住宅新築</strong>とび・土工工事 ／ 交野市</div></div>
+      <div class="work-card"><img class="work-img" src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&h=450&fit=crop&auto=format&q=80" alt="工場リノベ"><div class="work-caption"><strong>工場リノベ</strong>間仕切り・防音工事 ／ 守口市</div></div>
+      <div class="work-card"><img class="work-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop&auto=format&q=80" alt="店舗内装"><div class="work-caption"><strong>店舗内装</strong>軽天・天井仕上 ／ 門真市</div></div>
     </div>
   </div>
 </section>
@@ -352,6 +402,7 @@
     <h2 class="section-title">お問い合わせ・ご相談</h2>
     <p style="color:#aab4c2;">下請け・協力業者のご相談、採用応募、お気軽にどうぞ。</p>
     <div style="display:inline-block;background:var(--accent);color:var(--navy);font-size:12px;font-weight:900;padding:4px 14px;border-radius:20px;margin:8px 0 20px;">✓ 営業日24時間以内に返信します</div>
+    <div style="display:inline-block;background:#1e2c45;color:var(--accent);font-size:13px;font-weight:700;padding:8px 20px;border-radius:6px;margin-bottom:16px;border:1px solid #2e3f5c;">⚡ 急ぎの現場・空き状況の確認もお気軽に</div>
     <div class="contact-tel"><a href="tel:0728132938">072-813-2938</a></div>
     <div class="contact-hours">受付時間：平日 8:00〜18:00　／　フォームは24時間受付</div>
 
